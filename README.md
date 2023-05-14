@@ -10,13 +10,12 @@ _Easily print an open source (and other) licenses to any media!_
 _Choose one of the lines below!_
 
 ```julia
-#
-# This package is un-registered, for now! I hope this will change shortly :)
-#
+import Pkg; Pkg.add("Licenses")
+```
 
-julia> import Pkg; Pkg.add("Licenses")
-
-julia> ]add Licenses
+```julia
+# In a Julia REPL
+]add Licenses
 ```
 
 ## Motivation
