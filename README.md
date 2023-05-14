@@ -32,8 +32,8 @@ somewhere in your document. Cool. Two weeks later you're writing _another_ blog
 post, or whatever. You need to re-find the contents of this license. Not a big
 deal, but this gets a bit cumbersome, right?
 
-Enter: `Licenses.jl`. This package provides every standard open source --- and
-CC --- license as a simple method: e.g. `MIT()`. So all you need to do is
+Enter: `Licenses.jl`. This package provides every standard license tracked by
+the [SPDX License List](https://spdx.org/licenses/). So all you need to do is
 install this package, and print your desired license wherever you want it!
 
 ## Usage
