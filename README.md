@@ -43,9 +43,15 @@ _Try it out for yourself!_
 ```julia
 julia> using Licenses
 
-julia> using Licenses: MIT
+julia> using Licenses: MIT, Unlicense
 
 julia> MIT()
+
+julia> Unlicense()
+
+julia> Licenses.text(MIT(copyright="Joe(y)"))
+
+julia> Licenses.name(License("CC-BY-4.0"))
 ```
 
 ## Credits
@@ -62,7 +68,3 @@ The [SPDX License List](https://spdx.org/licenses/) is used to fetch the
 contents for each requested license. The GitHub
 [License API](https://docs.github.com/en/rest/licenses) is used to find
 additional metadata for each license, if available.
-
-```
-
-```
