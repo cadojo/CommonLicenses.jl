@@ -1,5 +1,5 @@
 [![Tests](https://github.com/cadojo/Licenses.jl/workflows/UnitTests/badge.svg)](https://github.com/cadojo/Licenses.jl/actions?query=workflow%3AUnitTests)
-[![Docs](https://github.com/cadojo/Licenses.jl/workflows/Documentation/badge.svg)](https://cadojo.github.io/Licenses.jl)
+[![Docs](https://github.com/cadojo/Licenses.jl/workflows/Documentation/badge.svg)](https://cadojo.github.io/Licenses.jl/dev)
 
 # `Licenses.jl`
 
