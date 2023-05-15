@@ -1,15 +1,15 @@
-# `Licenses.jl`
+# `CommonLicenses.jl`
 
-_Licenses for open source software, writing, media, and more!_
+_Standard licenses for open source software, writing, media, and more!_
 
 ## Installation
 
 _Choose one of the two lines below!_
 
 ```julia
-julia> import Pkg; Pkg.add("Licenses")
+julia> import Pkg; Pkg.add("CommonLicenses")
 
-julia> ]add Licenses
+julia> ]add CommonLicenses
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ julia> ]add Licenses
 _Conveniently add an open source license to your executable document!_
 
 ```@repl main
-using Licenses: MIT
+using CommonLicenses: MIT
 
 MIT(copyright="Joey")
 ```

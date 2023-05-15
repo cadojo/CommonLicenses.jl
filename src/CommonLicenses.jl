@@ -16,7 +16,7 @@ $(EXPORTS)
 ## Imports
 $(IMPORTS)
 """
-module Licenses
+module CommonLicenses
 
 export License
 
@@ -73,4 +73,4 @@ include("interface.jl")
 include("implementation.jl")
 include("common.jl")
 
-end # module Licenses
+end # module CommonLicenses

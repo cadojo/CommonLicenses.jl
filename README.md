@@ -1,21 +1,21 @@
-[![Tests](https://github.com/cadojo/Licenses.jl/workflows/UnitTests/badge.svg)](https://github.com/cadojo/Licenses.jl/actions?query=workflow%3AUnitTests)
-[![Docs](https://github.com/cadojo/Licenses.jl/workflows/Documentation/badge.svg)](https://cadojo.github.io/Licenses.jl/dev)
+[![Tests](https://github.com/cadojo/CommonLicenses.jl/workflows/UnitTests/badge.svg)](https://github.com/cadojo/CommonLicenses.jl/actions?query=workflow%3AUnitTests)
+[![Docs](https://github.com/cadojo/CommonLicenses.jl/workflows/Documentation/badge.svg)](https://cadojo.github.io/CommonLicenses.jl/dev)
 
-# `Licenses.jl`
+# `CommonLicenses.jl`
 
-_Easily print an open source (and other) licenses to any media!_
+_Executable licenses for executable documents!_
 
 ## Installation
 
 _Choose one of the lines below!_
 
 ```julia
-import Pkg; Pkg.add("Licenses")
+import Pkg; Pkg.add("CommonLicenses")
 ```
 
 ```julia
 # In a Julia REPL
-]add Licenses
+]add CommonLicenses
 ```
 
 ## Motivation
@@ -31,8 +31,8 @@ somewhere in your document. Cool. Two weeks later you're writing _another_ blog
 post, or whatever. You need to re-find the contents of this license. Not a big
 deal, but this gets a bit cumbersome, right?
 
-Enter: `Licenses.jl`. This package provides every standard license tracked by
-the [SPDX License List](https://spdx.org/licenses/). So all you need to do is
+Enter: `CommonLicenses.jl`. This package provides every standard license tracked
+by the [SPDX License List](https://spdx.org/licenses/), so all you need to do is
 install this package, and print your desired license wherever you want it!
 
 ## Usage
@@ -40,17 +40,17 @@ install this package, and print your desired license wherever you want it!
 _Try it out for yourself!_
 
 ```julia
-julia> using Licenses
+julia> using CommonLicenses
 
-julia> using Licenses: MIT, Unlicense
+julia> using CommonLicenses: MIT, Unlicense
 
 julia> MIT()
 
 julia> Unlicense()
 
-julia> Licenses.text(MIT(copyright="Joe(y)"))
+julia> CommonLicenses.text(MIT(copyright="Joe(y)"))
 
-julia> Licenses.name(License("CC-BY-4.0"))
+julia> CommonLicenses.name(License("CC-BY-4.0"))
 ```
 
 ## Credits

@@ -1,15 +1,15 @@
 using Documenter
-using Licenses
+using CommonLicenses
 
 makedocs(
-    sitename="Licenses",
+    sitename="CommonLicenses",
     format=Documenter.HTML(),
-    modules=[Licenses]
+    modules=[CommonLicenses]
 )
 
 deploydocs(
     target="build",
-    repo="github.com/cadojo/Licenses.jl.git",
+    repo="github.com/cadojo/CommonLicenses.jl.git",
     branch="gh-pages",
     devbranch="main",
     versions=["stable" => "v^", "manual", "v#.#", "v#.#.#"],

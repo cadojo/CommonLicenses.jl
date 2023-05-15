@@ -4,7 +4,7 @@ _All docstrings!_
 
 ```@autodocs
 Modules = [
-    Licenses,
+    CommonLicenses,
 ]
 Order = [:module, :type, :function, :constant]
 ```
