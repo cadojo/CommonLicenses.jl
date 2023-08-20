@@ -29,7 +29,7 @@ function Base.show(io::IO, ::MIME"text/html", license::AbstractLicense)
     contract = replace(text(license), "\n" => "<br>")
     content = """
     <details>
-    <summary>License</summary>
+    <summary>$(name(license))</summary>
     <code>
     $(contract)
     </code>

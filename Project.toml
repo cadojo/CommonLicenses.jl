@@ -1,7 +1,7 @@
 name = "CommonLicenses"
 uuid = "31d8bc61-a8a5-4aaa-ae43-a3b73cb73fef"
 authors = ["Joe Carpinelli <joseph.d.carpinelli@loopy.software>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
