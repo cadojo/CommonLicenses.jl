@@ -9,17 +9,17 @@ A supertype for all licenses.
 
 All `License` subtypes should have the following methods defined:
 
-- `Licenses.name(license)::AbstractString`
-- `Licenses.spdx(license)::AbstractString`
-- `Licenses.text(license)::AbstractString`
+- `CommonLicenses.name(license)::AbstractString`
+- `CommonLicenses.spdx(license)::AbstractString`
+- `CommonLicenses.text(license)::AbstractString`
 
 The following methods may be optionally defined.
 
-- `Licenses.conditions(license)::AbstractSet{<:AbstractString}`
-- `Licenses.permissions(license)::AbstractSet{<:AbstractString}`
-- `Licenses.limitations(license)::AbstractSet{<:AbstractString}`
-- `Licenses.arguments(license)::NTuple{N,Pair{<:AbstractString,Symbol}} where {N}`
-- `Licenses.defaults(license)::NTuple{N,Pair{Symbol,<:Any}} where {N}`
+- `CommonLicenses.conditions(license)::AbstractSet{<:AbstractString}`
+- `CommonLicenses.permissions(license)::AbstractSet{<:AbstractString}`
+- `CommonLicenses.limitations(license)::AbstractSet{<:AbstractString}`
+- `CommonLicenses.arguments(license)::NTuple{N,Pair{<:AbstractString,Symbol}} where {N}`
+- `CommonLicenses.defaults(license)::NTuple{N,Pair{Symbol,<:Any}} where {N}`
 """
 abstract type AbstractLicense end
 
@@ -27,9 +27,14 @@ Base.show(io::IO, ::MIME"text/plain", license::AbstractLicense) = println(io, te
 
 function Base.show(io::IO, ::MIME"text/html", license::AbstractLicense)
     contract = replace(text(license), "\n" => "<br>")
+    header = name(license)
+    if !occursin("license", lowercase(header))
+        header = "$header License"
+    end
+
     content = """
     <details>
-    <summary>$(name(license))</summary>
+    <summary>$(header)</summary>
     <code>
     $(contract)
     </code>
@@ -114,7 +119,7 @@ Specify default values for each license argument.
 
 # Extended Help
 
-See also, `Licenses.arguments`.
+See also, `CommonLicenses.arguments`.
 """
 function defaults end
 
@@ -123,7 +128,7 @@ Return all required arguments.
 
 # Extended Help
 
-See also, `Licenses.arguments`.
+See also, `CommonLicenses.arguments`.
 """
 function required(license::AbstractLicense)
     return map(
